@@ -1,0 +1,10 @@
+[{"id": 1, "name": "ILX", "average_price": 303176, "brand_name": "Acura"},
+{"id": 2, "name": "MDX", "average_price": 448193, "brand_name": "Acura"},
+{"id": 3, "name": "RDX", "average_price": 395753, "brand_name": "Acura"},
+{"id": 4, "name": "RLX", "average_price": 453100, "brand_name": "Acura"},
+{"id": 5, "name": "TL", "average_price": 247225, "brand_name": "Acura"},
+{"id": 6, "name": "TSX", "average_price": 232533, "brand_name": "Acura"},
+{"id": 7, "name": "A1", "average_price": 260696, "brand_name": "Audi"},
+{"id": 9, "name": "A3", "average_price": 255299, "brand_name": "Audi"},
+{"id": 10, "name": "A4", "average_price": 299412, "brand_name": "Audi"}
+]
