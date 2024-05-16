@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  # Health check route
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # Routes for brands with limited actions
+  resources :brands, only: [:index, :create] do
+    # Nested resource for creating a model within a specific brand
+    # This generates routes like brands/:brand_id/models
+    resources :models, only: [:create]
+  end
+
+  # Custom route to fetch models for a specific brand
+  # Changed the name to avoid conflict
+  get '/brands/:id/models', to: 'brands#models', as: 'list_brand_models'
+
+  # Routes for models with limited actions
+  resources :models, only: [:index, :update]
 end
